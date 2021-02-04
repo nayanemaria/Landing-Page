@@ -1,0 +1,437 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+/* ================================== FONTES ==================================== */
+
+@font-face {
+	font-family: 'Oswald-Regular';
+	src: url('../fonts/Oswald-Regular/Oswald-Regular.eot');
+	src: url('../fonts/Oswald-Regular/Oswald-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Oswald-Regular/Oswald-Regular.woff') format('woff'), url('../fonts/Oswald-Regular/Oswald-Regular.ttf') format('truetype'), url('../fonts/Oswald-Regular/Oswald-Regular.svgz#Oswald-Regular') format('svg'), url('../fonts/Oswald-Regular/Oswald-Regular.svg#Oswald-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PTSerif-Regular';
+	src: url('../fonts/PTSerif-Regular/PTSerif-Regular.eot');
+	src: url('../fonts/PTSerif-Regular/PTSerif-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/PTSerif-Regular/PTSerif-Regular.woff') format('woff'), url('../fonts/PTSerif-Regular/PTSerif-Regular.ttf') format('truetype'), url('../fonts/PTSerif-Regular/PTSerif-Regular.svgz#PTSerif-Regular') format('svg'), url('../fonts/PTSerif-Regular/PTSerif-Regular.svg#PTSerif-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.navbar a {
+	color: #fff;
+	font-size: 22px;
+	font-family: 'Oswald-Regular';
+}
+
+/* menu */
+
+.navbar {
+	background-color: #0079c1;
+	box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+	position: fixed;
+	width: 100%;
+	z-index: 3;
+	min-height: 60px;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+.navbar li a {
+	display: block;
+	padding: 20px 20px;
+	border: none;
+	text-decoration: none;
+}
+
+.navbar .menu {
+	clear: both;
+	max-height: 0;
+	transition: max-height .4s ease-out;
+}
+
+/* menu icon */
+.navbar .menu-icon {
+	cursor: pointer;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	display: block;
+	width: 30px;
+	padding: 8px 0;
+}
+
+.navbar .menu-icon .navbaricon {
+	background: #fff;
+	display: block;
+	height: 2px;
+	position: relative;
+	transition: background .2s ease-out;
+	width: 18px;
+}
+
+.navbar .menu-icon .navbaricon:before,
+.navbar .menu-icon .navbaricon:after {
+	background: #fff;
+	content: '';
+	display: block;
+	height: 100%;
+	position: absolute;
+	transition: all .2s ease-out;
+	width: 100%;
+}
+
+.navbar .menu-icon .navbaricon:before {
+	top: 5px;
+}
+.navbar .menu-icon .navbaricon:after {
+	top: -5px;
+}
+
+/* menu btn */
+
+.navbar .menu-btn {
+	display: none;
+}
+
+.navbar .menu-btn:checked ~ .menu {
+	max-height: 470px;
+}
+
+.navbar .menu-btn:checked ~ .menu-icon .navbaricon {
+	background: transparent;
+}
+
+.navbar .menu-btn:checked ~ .menu-icon .navbaricon:before {
+	transform: rotate(-45deg);
+}
+
+.navbar .menu-btn:checked ~ .menu-icon .navbaricon:after {
+	transform: rotate(45deg);
+}
+
+.navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navbaricon:before,
+.navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navbaricon:after {
+	top: 0;
+}
+
+/* logos do menu e do footer*/
+
+.logo {
+	display: block;
+	width: 131px;
+	height: 19px;
+	text-indent: -9999px;
+	float: left;
+	background-image: url('../img/o-povo-online.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.logo-footer{
+	display: block;
+	width: 131px;
+	height: 19px;
+	text-indent: -9999px;
+	float: left;
+	background-image: url('../img/o-povo-online.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+/* seção principal */
+
+section{
+	padding-top: 127px;
+}
+
+/* tipografias da seção */
+
+.titulo-um{
+	font-family: 'Oswald-Regular';
+	font-size: 50px;
+	color: #314163;
+	margin-bottom: 35px;
+}
+.titulo-dois{
+	font-family: 'Oswald-Regular';
+	font-size: 35px;
+	color: #314163;
+	margin-bottom: 30px;
+}
+.subtitulos{
+	font-family: 'Oswald-Regular';
+	font-size: 22px;
+	color: #314163;
+	margin-bottom: 10px;
+}
+.textos{
+	font-family: 'PTSerif-Regular';
+	font-size: 19px;
+	color: #314163;
+	margin-bottom: 30px;
+}
+
+/* divisória da seção (bg azul) */
+
+.divisoria::before {
+	content: '';
+	display: block;
+	height: 1732px;
+	background: #314163;
+	width: 290px;
+	float: right;
+	position: relative;
+}
+
+.img-div{
+	position: absolute;
+	padding-left: 565px;
+	margin-top: ;
+	padding-top: 450px;
+}
+.img-div img{
+	width: 390px;
+	height: 390px;
+}
+/* formulario */
+
+.formulario{
+	background-color: #9fcae3;
+	height: 895px;
+	margin-right: 60px;
+}
+
+.borda{
+	padding: 20px 15px;
+	margin: 15px 0px;
+	border: 1px solid #314163;
+}
+
+.formulario h1{
+	font-family: "Oswald-Regular";
+	font-size: 26px;
+	color: #314163;
+}
+
+.formulario label, .formulario p{
+	font-family: "Oswald-Regular";
+	font-size: 22px;
+	color: #314163;
+}
+
+.formulario input{
+	width: 100%;
+	height: 33px;
+	border: 1px solid #314163;
+	border-radius: 8px;
+	background-color: #9fcae3;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.formulario input.inputs-menores{
+	width: 173px;
+}
+.formulario input.inputs-maiores{
+	width: 273px;
+	padding-left: 10px;
+}
+.metade {
+	width: 54%;
+}
+
+.avisos{
+	font-family: "Oswald-Regular";
+	font-size: 14px;
+	color: #314163;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.box-upload{
+	display: flex;
+}
+
+/* botões do formulário */
+
+.button a, .button-enviar a{
+	font-family: "Oswald-Regular";
+	font-size: 20px;
+	color: #fff;
+	text-decoration: none;
+}
+.button{
+	background-color: #4a85af;
+	color: #fff;
+	width: 165px;
+	height: 40px;
+	border: none;
+	margin-bottom: 42px;
+}
+
+.button-enviar{
+	background-color: #114163;
+	color: #fff;
+	width: 165px;
+	height: 40px;
+	border: none;
+	float: right;
+
+}
+
+/* footer (rodapé) */
+
+.footer {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #0079c1;
+	color: white;
+	text-align: center;
+	height: 60px;
+	margin-top: 127px;
+}
+
+.footer span{
+	font-size: 11px;
+	font-family: 'Oswald-Regular';
+	color: #fff;
+	margin: 20px 0;
+}
+
+/* configurações mobile*/
+
+@media (max-width: 1201px){
+	.logo-mobile{
+		display: block;
+		width: 131px;
+		height: 19px;
+		text-indent: -9999px;
+		float: left;
+		background-image: url('../img/o-povo-online.png');
+		background-repeat: no-repeat;
+		background-size: 100%;
+		margin-top: 17px;
+	}
+	.logo{
+		display: none;
+	}
+	.img-div-mobile img{
+		width: 270px;
+		height: 270px;
+		align-items: center;
+		margin: 0 auto;
+	}
+	.navbar li a {
+		display: block;
+		padding: 13px 0px;
+		border: none;
+		text-decoration: none;
+	}
+	.navbar a {
+		color: #fff;
+		font-size: 18px;
+		font-family: 'Oswald-Regular';
+	}
+	.divisoria{
+		display: none;
+	}
+	.formulario input.inputs-menores{
+		width: 100%;
+	}
+	.formulario input.inputs-maiores{
+		width: 100%;
+	}
+	.formulario h1 {
+		font-size: 22px;
+		color: #314163;
+	}
+	.formulario label, .formulario p {
+		font-size: 18px;
+	}
+	.button a, .button-enviar a {
+		font-size: 18px;
+	}
+	.metade{
+		width: 100%;
+	}
+	.formulario {
+		background-color: #9fcae3;
+		height: 990px;
+		margin-right: 60px;
+	}
+	.titulo-um{
+		font-size: 35px;
+		margin-bottom: 15px;
+	}
+	.titulo-dois{
+		font-size: 25px;
+		margin-bottom: 30px;
+	}
+	.subtitulos{
+		margin-bottom: 10px;
+	}
+	.textos{
+		font-size: 18px;
+		margin-bottom: 30px;
+	}
+	.avisos {
+		font-size: 10px;
+	}
+	section{
+		padding-top: 0px;
+	}
+	.footer {
+		margin-top: 90px;
+	}
+}
+
+/* configurações desktop */
+
+@media (min-width: 1202px) {
+	.navbar li {
+		float: left;
+	}
+	.navbar .menu {
+		clear: none;
+		float: right;
+		max-height: none;
+	}
+	.navbar .menu-icon {
+		display: none;
+	}
+	.navbar {
+		background-color: #0079c1;
+		box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+		position: fixed;
+		width: 100%;
+		z-index: 3;
+		height: 60px;
+		overflow: hidden;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 2;
+	}
+	.navbar li a:hover,
+	.navbar .menu-btn:hover {
+		background-color: #005384;
+	}
+	.img-div-mobile{
+		display: none;
+	}
+	.img-div-mobile img{
+		display: none;
+	}
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teste</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="css/teste.css">
+</head>
+<body>
+
+	<!-- menu -->
+
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 my-5">
+				<div class="navbar px-lg-5 px-3 d-flex align-items-center justify-content-between">
+					<a class="logo" href=""></a>
+					<nav class="float-r">
+						<a class="logo-mobile" href=""></a>
+						<input class="menu-btn" type="checkbox" id="menu-btn" />
+						<label class="menu-icon" for="menu-btn"><span class="navbaricon"></span></label>
+						<ul class="menu float-r mt-lg-3 mt-5">
+							<li><a href="#sobre">Sobre</a></li>
+							<li><a href="#video">Vídeo</a></li>
+							<li><a href="#proposito">Propósito</a></li>
+							<li><a href="#diversidade">Diversidade</a></li>
+							<li><a href="#valores">Valores</a></li>
+							<li><a href="#areasdeatuacao">Áreas de Atuação</a></li>
+							<li><a href="#depoimentos">Depoimentos</a></li>
+							<li><a href="#vagas">Vagas</a></li>
+
+						</ul>
+					</nav>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="img-div-mobile col-lg-7 col-12 d-flex px-lg-4 px-0 flex-lg-row flex-column">
+		<img src="img/vagas.png">
+	</div>
+
+	<!-- inicio -->
+	<section class="container mt-3">
+		<div class="row">
+			<div class="col col-lg-11 m-auto mt-5 my-5 col-sm-12">
+
+				<div class="divisoria">
+					<div class="img-div">
+						<img src="img/vagas.png">
+					</div>
+				</div>
+
+				<div class="informacoes col col-lg-7">
+
+					<h1 class="titulo-um">Vagas</h1>
+					<h2 class="titulo-dois">Consultor de negócios  - vendas publicidade</h2>
+
+					<h5 class="subtitulos">Requisitos</h5>
+					<p class="textos">Graduação em Marketing ou Publicidade e Propaganda. Experiência com Vendas. Conhecimentos de gestão de indicadores , negociação  e informática.</p>
+
+					<h5 class="subtitulos">Atividades</h5>
+					<p class="textos">Planejamento de vendas, visitas e clientes, desenvolvimento de propostas comerciais e plano de mídias, acompanhamento de indicadores e elaboração de orçamentos.</p>
+
+					<h5 class="subtitulos">Perfil do candidato</h5>
+					<p class="textos">Comunicativo, negociador, ágil e responsável.</p>
+
+					<h5 class="subtitulos">horario de trabalho</h5>
+					<p class="textos">8-18h</p>
+					
+				</div>
+
+
+				<!-- formulário -->
+				<div class="formulario col-lg-7 col-12 d-flex px-lg-4 px-0 flex-lg-row flex-column">
+					<form id="registro" method="get" action=".">
+						<div class="borda">
+							
+							<h1>Envie seu currículo</h1>
+
+							<label for="nome">Nome</label>
+							<input type="text" name="name" id="nome" required="">
+
+							<label for="email">Email</label>
+							<input type="text" placeholder="  example@example.com" name="email" id="email" required="">
+
+							<label for="cep">Cep</label>
+							<input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+							onblur="pesquisacep(this.value);" required="">
+
+							<label for="rua">Endereço</label>
+							<input type="text" name="rua" id="rua" required="">
+
+							<!-- CAMPOS DUPLOS -->
+							<div class="d-flex justify-content-between flex-lg-row flex-column">
+
+								<div class="metade">
+
+									<label for="numero">Número</label>
+									<br>
+									<input type="text" name="numero" id="numero" class="inputs-menores" required="">
+
+								</div>
+								<div class="metade">
+
+									<label for="bairro">Bairro</label>
+									<input type="text" name="bairro" id="bairro" required="" class="inputs-maiores">
+
+								</div>
+
+							</div>
+
+							<!-- CAMPOS DUPLOS -->
+							<div class="d-flex justify-content-between flex-lg-row flex-column">
+
+								<div class="metade">
+
+									<label for="cidade">Cidade</label>
+									<br>
+									<input type="text" name="cidade" id="cidade" required="" class="inputs-menores">
+
+								</div>
+								<div class="metade">
+
+									<label for="uf">Estado</label>
+									<input type="text" name="uf" id="uf" required="" class="inputs-maiores">
+
+								</div>
+
+							</div>
+
+							<p>Currículo</p>
+							<div class="box-upload">
+								<button class="button mt-3"><a href="#">Anexar Currículo</a></button>
+
+								<div class="avisos">
+									<span>Todos os campos são obrigatórios</span>
+									<br>
+									<span>Tamanho máximo para upload - 10mb</span>
+									<br>
+									<span>Tipo do arquivo: .pdf ou .doc</span>
+								</div>
+
+							</div>
+
+						</div>
+
+
+						<button class="button-enviar" onclick="validateForm();"><a href="#">Enviar currículo</a></button>
+					</form>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+
+
+	<!-- footer -->
+	<footer class="footer px-lg-5 px-3">
+		<a class="logo-footer my-3" href="http://radios.opovo.com.br/"></a>
+
+		<div class="d-flex justify-content-end">
+			<span>Copyright 1997-2019</span>
+		</div>
+
+	</footer>
+
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/teste.js"></script>
+
+</body>
+</html>
